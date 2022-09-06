@@ -1,0 +1,95 @@
+############################DAY1---assignments_react###########################
+
+que1: What is Virtual DOM?
+ans:
+1]virtual DOM is an actual copy of real DOM.
+2]The Virtual DOM (VDOM) is an in-memory representation of Real DOM.
+3] The representation of a UI is kept in memory and synced with the "real" DOM. 
+4]It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation.
+5]In real dom,the completed dom will be reloaded. and in case of virtual dom,those node will be updated  have changes ,not completely page will be updated.
+6] comparision of virtual dom and real dom is called "Diffie algorithm".
+----------------------------------------------------------------------------------
+que2: What is SPA?
+ans:
+1]SPA stands for Single Page Applications.
+2] Single page application : Any web application , in which when you are clicking on any button or selecting option from navigation bar then if your page which means browser page is reloading then that means that application is your "multi - page application" . 
+3]If it does not reload the browser page and just only updates the page without reloading then that application is known as Single Page application.
+4] When you create React application using CRA, (create-react-app boilerplate , developed by Facebook) it always create the application which will be Single page application.
+
+------------------------------------------------------------------------------------
+que3:What is difference between class and functional component?
+ans:
+a]functional component:
+ 1. A functional component is just a plain JavaScript function that accepts props as an argument and returns a React element.
+ 2. There is no render method used in functional components.
+ 3. Also known as Stateless components as they simply accept data and display them in some form, that they are mainly responsible for rendering UI.
+ 4. React lifecycle methods (for example, componentDidMount) cannot be used in functional components.
+ 5. Hooks can be easily used in functional components to make them Stateful.
+    example: const [name,SetName]= React.useState(" ")
+ 6. Constructors are not used.
+
+
+ Class Component::
+ 1. A class component requires you to extend from React. Component and create a render function which returns a React element.
+ 2. It must have the render() method returning JSX (which is syntactically similar to HTML)
+ 3. Also known as Stateful components because they implement logic and state.
+ 4. React lifecycle methods can be used inside class components (for example componentDidMount).
+ 5. It requires different syntax inside a class component to implement hooks.
+    example: constructor(props) {
+               super(props);
+               this.state = {name: ‘ ‘}
+             }
+ 6. Constructor are used as it needs to store state.
+
+--------------------------------------------------------------------------------------
+que4:What does mean by state and its use in react?
+ans:
+1]State of a component is an object that holds some information that may change over the lifetime of the component.
+2] We should always try to make our state as simple as possible and minimize the number of stateful components.
+
+Let's create a user component with message state,
+
+      class User extends React.Component {
+        constructor(props) {
+          super(props)
+
+          this.state = {
+            message: 'Welcome to React world'
+          }
+        }
+
+        render() {
+          return (
+            <div>
+              <h1>{this.state.message}</h1>
+            </div>
+          )
+        }
+      }
+
+State is similar to props, but it is private and fully controlled by the component i.e., it is not accessible to any other component till the owner component decides to pass it.
+
+------------------------------------------------------------------
+que5:What is JSX and why do we use it instead of js?
+ans:
+JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML). Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax.
+In the example below text inside <h1> tag is returned as JavaScript function to the render function.
+      class App extends React.Component {
+        render() {
+          return(
+            <div>
+              <h1>{'Welcome to React world!'}</h1>
+            </div>
+          )
+        }
+      }
+JSX or JavaScript XML combines HTML and JavaScript, making the code easier to read and understandable for the user. JSX combines interactivity with markup rather than separating the two. It makes it easier to visualize DOM. In JSX we can directly write HTML tags inside JavaScript code.
+One of the advantages of JSX is that React creates a virtual DOM (a virtual representation of the page) to track changes and updates. Instead of rewriting the entire HTML, React modifies the DOM of the page whenever the information is updated. This is one of the main issues React was created to solve.
+
+-------------------------------------------------------------------------------------
+que6:what is package.json?
+
+ans:It contains the information about the project and also contains the libraries which the project is using and it also has the description of the commands which gets used to run test or build your project.
+
+
+======================================================================================
