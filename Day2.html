@@ -1,0 +1,102 @@
+=====================/Day2/======================================
+
+que1:  What is the Difference between react and react native? Which one is library or framework?
+---------->
+Reactjs--------------------->
+
+1]Best for Interactive UI & UX development
+2]Reusable Components
+3]Re-Useable Codes
+4]Simple UI even for New Users
+5]Primarily for Web Development
+6]Basically A Library
+
+
+React native----------------->
+
+1]Best for Mobile App Development & Cross-Platform App
+2]Pre-Built Components for Convenience in Development
+3]Fast-Rendering
+4]Easier Development for Cross-Platform Work
+5]Primarily for Mobile & Cross-Platform App
+6]Basically A Framework
+
+Reactjs is a library of JavaScript and react native is a framework.
+=================================================================
+
+que2:What is the package name you are using for routing
+
+ans: react-router-dom is the package name of routing.
+React Router is a standard library system built on top of the React and used to create routing in the React application using React Router Package.
+In this Browser Router as Router, Routes and Route and NavLink get imported from react-router-dom.
+ React Router DOM enables you to implement dynamic routing in a web app. 
+ Unlike the traditional routing architecture in which the routing is handled in a configuration outside of a running app, React Router DOM facilitates component-based routing according to the needs of the app and platform.
+
+=================================================================
+
+que3:How do you pass data from parent to child 
+
+ans: pass data from parent to child by using props.
+
+=================================================================
+que4: What is lazy loading in react ? 
+
+ans:
+1]In essence, lazy loading means that a component or a part of code must get loaded when it is required. It is also referred to as code splitting and data fetching . Talking about React specifically, it bundles the complete code and deploys all of it at the same time.
+
+2]Lazy loading is the practice of delaying load or initialization of resources or objects until they’re actually needed to improve performance and save system resources. 
+
+For example, if a web page has an image that the user has to scroll down to see, you can display a placeholder and lazy load the full image only when the user arrives to its location.
+
+The benefits of lazy loading include:
+
+Reduces initial load time – 
+Lazy loading a webpage reduces page weight, allowing for a quicker page load time.
+
+Bandwidth conservation – 
+Lazy loading conserves bandwidth by delivering content to users only if it’s requested.
+
+System resource conservation – 
+Lazy loading conserves both server and client resources, because only some of the images, JavaScript and other code actually needs to be rendered or executed.
+
+Syntax----------->
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+=================================================================
+que5:Difference b/w Stateful and stateless Component
+
+ans: Stateful Component:----------------->
+If the behaviour of a component is dependent on the state of the component then it can be termed as stateful component. These stateful components are always class components and have a state that gets initialized in the constructor.
+
+render() {
+    // ...
+  }
+}
+-------------------*----------------------------
+stateless Component------------>
+
+If the behaviour of a component is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the this keyword altogether.
+const App = (props) => {
+    const [count, setCount] = useState(0);
+  
+    return (
+      // JSX
+    )
+  }
+
+==============================================================
+
+que6:How do you switch one component to another, Conditional Rendering
+
+ans: Way to Switch/Navigate from one page to another page
+Link
+NavLink
+Redirect Component
+history.push
+history.replace
+Link Link is used to manage the navigation and it worked as an anchor tag. Check below code for the demonstration. import { Link } from 'react-router-dom'; ... ...
+About
+NavLink NavLink behaves the same as Link but in addition, it comes with a new attribute called “activeClassName” which helps us to add the class to the anchor tag when page url will match.
+
+import { NavLink } from 'react-router-dom'; ... ... About
+
+================================================================
